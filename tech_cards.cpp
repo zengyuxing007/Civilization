@@ -4,63 +4,39 @@
 #include <iostream>
 using namespace std;
 
-//Base template for tech cards
-class tech_card
+//The resources in a owned by a player
+class resource
 {
 	private:
-		int level;
-		//Background background();
-		//Player owner();
-		//Icon icon();
-		string ability;
+		int quanity;
 	public:
-		//Default Constructor
-		tech_card()
-		{
-			level = 0;
-			ability = "none";
-		}
-		
 		//Constructor
-		tech_card(int l, /*, Player o, Icon i,*/string a)
+		resource()
 		{
-			// owner = o;
-			level = l;
-			// icon = i;
-			ability = a;
+			quanity = 0;
 		}
-
-		//Function to play on pickup
-		void pickup(/*Player p*/)
+		resource(int x)
 		{
-			//p.tech_tree.add(level);
+			if (x >= 0)
+				quanity = x;
+			else
+				quanity = 0;
 		}
-};
-
-//Horseback Riding
-class horseback_riding:tech_card
-{
-	public:
-
-		//Play on pickup
-		void pickup(/*Player p*/)
-		{/*
-			p.tech_tree.add(level);
-			if (p.move_speed < 3)
-				p.move_speed = 3;
-		*/}
-
-		void ability()
+		int get()
 		{
-			if (true/*owner.resources.getSilk() >= 1*/)
-			{/*
-				Player p = choosePlayer();
-				owner.trade.add(6);
-				p.trade.add(9);
-			*/}
+			return quanity;
+		}
+		int add(int a)
+		{
+			 quanity += a;
+		}
+		int spend(int a)
+		{
+			quanity -= a;
 		}
 };
 
+//Contains all information pertaining to a player
 class Player
 {
 	private:
@@ -69,6 +45,12 @@ class Player
 		int move_speed;
 		int city_limit;
 	public:
+		resource silk;
+		resource iron;
+		resource wheat;
+		resource incence;
+		resource uranium; 
+		resource spies; 
 		Player()
 		{
 			gold = 0;
@@ -86,7 +68,81 @@ class Player
 		{
 			return trade;		
 		}
+
+		int getMS()
+		{
+			return move_speed;
+		}
+
+		void setMS(int x)
+		{
+			move_speed = x;
+		}
+
+		void addTrade(int x)
+		{
+			trade += x;
+		}
 };
+
+//Base template for tech cards
+class tech_card
+{
+	protected:
+		int level;
+		//Background background();
+		Player owner;
+		//Icon icon();
+		string ability;
+	public:
+		//Default Constructor
+		tech_card()
+		{
+			level = 0;
+			ability = "none";
+		}
+		
+		//Constructor
+		tech_card(int l, Player o,/* Icon i,*/string & a)
+		{
+			owner = o;
+			level = l;
+			// icon = i;
+			ability = a;
+		}
+
+		//Function to play on pickup
+		void pickup()
+		{
+			//p.tech_tree.add(level);
+		}
+};
+
+//Horseback Riding
+class horseback_riding:tech_card
+{
+	public:
+
+		//Play on pickup
+		void pickup()
+		{
+			//owner.tech_tree.add(level);
+			if (owner.getMS() < 3)
+				owner.setMS(3);
+		}
+
+		void ability()
+		{
+			if (owner.silk.get() >= 1)
+			{
+				owner.silk.spend(1);
+				Player p;
+				owner.addTrade(6);
+				p.addTrade(9);
+			}
+		}
+};
+
 
 
 int main()
