@@ -7,6 +7,51 @@
 using namespace std;
 int trade_requirements[5] = {6, 11, 16, 21, 26};
 
+
+//The resources in a owned by a player
+class resource
+{
+	private:
+		int quanity;
+	public:
+		//Constructor
+		resource()
+		{
+			quanity = 0;
+		}
+		resource(int x)
+		{
+			if (x >= 0)
+				quanity = x;
+			else
+				quanity = 0;
+		}
+		int get()
+		{
+			return quanity;
+		}
+		int add(int a)
+		{
+			 quanity += a;
+		}
+		int spend(int a)
+		{
+			quanity -= a;
+		}
+};
+
+struct Bank
+{
+	resource silk;
+	resource iron;
+	resource wheat;
+	resource incence;
+	resource uranium; 
+	resource spies; 
+	resource gold;
+	resource trade;	
+};
+
 //Base template for tech cards
 class tech_card
 {
@@ -93,4 +138,42 @@ class TechTree
 		}
 };
 
+//Contains all information pertaining to a player
+class Player
+{
+	private:
+		Bank bank;
+		int move_speed;
+		int city_limit;
+	public:
+		//All possible resources
+		TechTree tech_tree;
+	
+		//Constructor
+		Player()
+		{
+			move_speed = 2;
+			city_limit = 2;
+		}
 
+		int getMS()
+		{
+			return move_speed;
+		}
+
+		void setMS(int x)
+		{
+			move_speed = x;
+		}
+};
+
+int main()
+{
+	vector<int> test(5, 25);
+	for (vector<int>::iterator it = test.begin(); it != test.end(); ++it)
+	{
+		cout << *it << endl;
+	}
+	cout << "Hello World";
+	return 0;
+}
