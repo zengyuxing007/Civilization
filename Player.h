@@ -9,9 +9,6 @@
 class Player
 {
 	public:
-		//Default constructor.
-		Player();
-
 		//All a players resources (trade, gold, market, uranium, spies)
 		resource_bank bank;
 
@@ -20,5 +17,9 @@ class Player
 
 		// A players tech trees
 		tech_tree techs;
+		//Default constructor.
+		Player();
+
+
 };
 #endif

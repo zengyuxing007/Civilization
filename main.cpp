@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
+
 #include "Player.h"
-#include "Player.cpp"
 #include "tech_card.h"
 
 using namespace std;

@@ -18,7 +18,7 @@ class tech_card
 		// Default constructor. Sets the level and any ability phases
 		tech_card();
 		// Constructor associates a player and sets the level
-		tech_card(Player& owner);
+		tech_card(Player & owner);
 
 		// Returns the level of the tech
 		int getLevel();
