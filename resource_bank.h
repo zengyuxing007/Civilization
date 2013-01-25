@@ -1,4 +1,8 @@
-struct Bank
+#ifndef RESOURCE_BANK_H_
+#define RESOURCE_BANK_H_
+#include "resource.h"
+
+struct resource_bank
 {
 	resource silk;
 	resource iron;
@@ -8,4 +12,5 @@ struct Bank
 	resource spies; 
 	resource gold;
 	resource trade;	
-};
+};		
+#endif

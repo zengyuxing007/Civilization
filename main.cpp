@@ -1,10 +1,14 @@
+#include <cstdlib>
+#include <iostream>
+#include "Player.h"
+#include "Player.cpp"
+#include "tech_card.h"
+
+using namespace std;
+
 int main()
 {
-	vector<int> test(5, 25);
-	for (vector<int>::iterator it = test.begin(); it != test.end(); ++it)
-	{
-		cout << *it << endl;
-	}
-	cout << "Hello World";
-	return 0;
+	Player testPlayer1;
+	tech_card t;
+	testPlayer1.techs.add(t);
 }

@@ -1,31 +1,25 @@
 //The resources in a owned by a player
-class resource
+//Constructor
+Player::resource()
 {
-	private:
-		int quanity;
-	public:
-		//Constructor
-		resource()
-		{
-			quanity = 0;
-		}
-		resource(int x)
-		{
-			if (x >= 0)
-				quanity = x;
-			else
-				quanity = 0;
-		}
-		int get()
-		{
-			return quanity;
-		}
-		int add(int a)
-		{
-			 quanity += a;
-		}
-		int spend(int a)
-		{
-			quanity -= a;
-		}
-};
+	quanity = 0;
+}
+Player::resource(int initial)
+{
+	if (initial >= 0)
+		quanity = initial;
+	else
+		quanity = 0;
+}
+int Player::get()
+{
+	return quanity;
+}
+int Player::add(int a)
+{
+	 quanity += a;
+}
+int Player::spend(int a)
+{
+	quanity -= a;
+}
