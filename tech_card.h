@@ -13,11 +13,11 @@ class tech_card
 		civilization * owner;
 		// Background background(); //Background image. Same for all techs
 		// Icon icon(); //Icon that appears in the top corner
-		// phase in which ability can be used
-		// std::string ability_phase;
+
 	public:
 		// Default constructor. Sets the level and any ability phases
 		tech_card();
+
 		// Constructor associates a civilization and sets the level
 		tech_card(civilization * owner);
 

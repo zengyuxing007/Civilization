@@ -1,5 +1,6 @@
 // Types of tickets
 #include "tech_card.h"
+
 //Base template for tech cards
 //Default Constructor
 tech_card::tech_card()
@@ -18,6 +19,7 @@ int tech_card::getLevel()
 {
 	return level;
 }
+
 //Function to play on onLearn
 void tech_card::onLearn()
 {
