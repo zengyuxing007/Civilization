@@ -1,16 +1,23 @@
 //Parent attribute class
+#include "attribute.h"
 
-attribute::attribute();
+attribute::attribute()
 {
 	amount = 0;
 }
 
 attribute::attribute(int a)
 {
-	amount = a;
+	amount = 0;
+	set(a);
 }
 
-attribute::set(int a)
+int attribute::get()
+{
+	return amount;
+}
+
+void attribute::set(int a)
 {
 	if (amount < a)
 		amount = a;

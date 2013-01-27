@@ -9,11 +9,11 @@ class attribute
 		int amount;
 
 	public:
-		//initialize
-		attribute(int initialAmount);
+		//Constructors
 		attribute();
+		attribute(int initialAmount);
 
-		//simple get
+		//Get the numeric representation of attribute
 		int get();
 
 		//set function will likely vary a lot in child classes

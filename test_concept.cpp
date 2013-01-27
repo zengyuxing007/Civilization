@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
-
+#include "Player.h"
 using namespace std;
 
 
@@ -29,9 +29,6 @@ class innertest
 
 int main()
 {
-	test t (4);
-	innertest i;
-	i.func(t);
-	cout << t.x;
+	Player testPlayer;
 	system("PAUSE");
 }
