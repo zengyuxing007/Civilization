@@ -11,14 +11,15 @@ tech_tree::tech_tree()
 {
 	levels = std::vector<int>(5,0);
 	tech_card t;
-	tree = std::vector<std::vector<tech_card> >(5, std::vector<tech_card>(2, t));
+	tree = std::vector<std::vector<tech_card> >(5, std::vector<tech_card>(MAX_TECHS, t));
 }
 
-tech_tree::tech_tree(civilization* o)
+tech_tree::tech_tree(civilization * o)
 {
 	levels = std::vector<int>(5,0);
 	owner = o;
-	//tree = std::vector<std::vector<tech_card> >(5, std::vector<tech_card>(2, new tech_card));
+	tech_card t;
+	tree = std::vector<std::vector<tech_card> >(5, std::vector<tech_card>(MAX_TECHS, t));
 }
 
 void tech_tree::init()
@@ -31,16 +32,16 @@ void tech_tree::init()
 //Adds a tech card to the tree
 bool tech_tree::add (tech_card t)
 {
-	// int tlevel = t.getLevel();
-	// if ((tlevel == 1 || levels[tlevel-1] - levels[tlevel] >= 2) && *owner.bank.trade.get() >= trade_requirements[tlevel - 1]);
-	// {
-	// 	tree[tlevel][levels[tlevel]] = t;
-	// 	levels[tlevel]++;
-	// 	t.onLearn();
-	// }
-	// else
-	// {
-	// 	return false;
-	// }
-	// return true;
+	int tlevel = t.getLevel();
+	if ((tlevel == 1 || levels[tlevel-1] - levels[tlevel] >= 2) && owner->bank.trade.get() >= trade_requirements[tlevel - 1])
+	{
+		tree[tlevel][levels[tlevel]] = t;
+		levels[tlevel]++;
+		t.onLearn();
+	}
+	else
+	{
+		return false;
+	}
+	return true;
 }

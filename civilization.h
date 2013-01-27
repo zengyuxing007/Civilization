@@ -16,7 +16,7 @@ class civilization
 		attributes stats;
 
 		// A players tech trees
-		// tech_tree techs;
+		tech_tree techs;
 		//Default constructor.
 		civilization();
 };

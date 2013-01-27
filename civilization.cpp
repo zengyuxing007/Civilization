@@ -8,5 +8,6 @@ using namespace std;
 //Constructor
 civilization::civilization()
 {	
-	//techs = new tech_tree (*this);
+	tech_tree t(this);
+	techs = t;
 }
