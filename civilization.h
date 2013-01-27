@@ -2,6 +2,8 @@
 #ifndef CIVILIZATION_H_
 #define CIVILIZATION_H_
 
+#include <vector>
+#include "building.h"
 #include "resource_bank.h"
 #include "attributes.h"
 #include "tech_tree.h"
@@ -9,6 +11,9 @@
 class civilization
 {
 	public:
+		// Contains the buildings unlocked by the player
+		std::vector<building> buildings;
+
 		//All a players resources (trade, gold, market, uranium, spies)
 		resource_bank bank;
 
