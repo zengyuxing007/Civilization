@@ -1,25 +1,34 @@
 //The resources in a owned by a player
 //Constructor
-Player::resource()
+
+#include "resource.h"
+
+resource::resource()
 {
-	quanity = 0;
+	amount = 0;
 }
-Player::resource(int initial)
+
+resource::resource(int initial)
 {
 	if (initial >= 0)
-		quanity = initial;
+		amount = initial;
 	else
-		quanity = 0;
+		amount = 0;
 }
-int Player::get()
+
+int resource::get()
 {
-	return quanity;
+	return amount;
 }
-int Player::add(int a)
+
+void resource::add(int a)
 {
-	 quanity += a;
+	 amount += a;
 }
-int Player::spend(int a)
+
+void resource::spend(int a)
 {
-	quanity -= a;
+	amount -= a;
+	if (amount < 0)
+		amount = 0;
 }

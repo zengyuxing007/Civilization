@@ -5,14 +5,14 @@
 class resource
 {
 	private:
-		int quanity;
+		int amount;
 	
 	public:
 		resource();
 		resource(int initial);
 		int get();
-		void add(int x);
-		void spend(int x);
+		void add(int inc);
+		void spend(int dec);
 };
 
 #endif

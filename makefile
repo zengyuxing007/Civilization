@@ -1,7 +1,7 @@
 CXX = g++
 FILES = main.cpp civilization.cpp tech_card.cpp tech_tree.cpp \
 		attribute.cpp resource.cpp 
-TEST = main.cpp attribute.cpp
+TEST = test.cpp resource.cpp
 OUT_EXE = civilization.exe
 
 build: $(FILES) 
