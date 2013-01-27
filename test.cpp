@@ -10,6 +10,6 @@ using namespace std;
 
 int main()
 {
-	tech_card t;
+	civilization c;
 	// cout << r1.get() << "  " << r2.get() << "  " << r3.get() << "  ";
 }
