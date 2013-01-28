@@ -6,12 +6,16 @@
 #include "attribute.h"
 #include "resource.h"
 #include "tech_tree.h"
+#include "unit.h"
 
 using namespace std;
 
 int main()
 {
-	test_tree::init();
+	tech_tree::init();
+	unit u1;
+	unit u2(1,1);
+	unit u3(3,4);
 	civilization c;
-	// cout << r1.get() << "  " << r2.get() << "  " << r3.get() << "  ";
+	cout << u1.getStrength() << "  " << u2.getStrength() << "  " << u3.getStrength() << "  ";
 }
