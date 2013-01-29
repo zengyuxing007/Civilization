@@ -8,6 +8,7 @@
 #include "tech_tree.h"
 #include "unit.h"
 #include "army.h"
+#include "city.h"
 
 using namespace std;
 
@@ -15,9 +16,8 @@ int main()
 {
 	tech_tree::init();
 	civilization c;
-	unit u(2, 1);
-	army a;
-	army a1(&c);
-	a.addUnit(u);
-	a1.addUnit(u);
+	building b;
+	tile t;
+	city fonthill;
+	cout << "Trade: " << fonthill.trade.get() << endl << "Culture: " << fonthill.culture.get() << endl << "Gold: " << fonthill.gold.get() << endl << "Production: " << fonthill.production.get() << endl;
 }

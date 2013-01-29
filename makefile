@@ -4,7 +4,8 @@ FILES = main.cpp civilization.cpp tech_card.cpp tech_tree.cpp \
 
 TEST = test.cpp tech_card.cpp civilization.cpp \
 	   resource.cpp attribute.cpp tech_tree.cpp \
-	   building.cpp unit.cpp army.cpp
+	   building.cpp unit.cpp army.cpp tile.cpp \
+	   city.cpp
 
 OUT_EXE = civilization.exe
 

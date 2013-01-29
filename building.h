@@ -2,7 +2,9 @@
 #ifndef BUILDING_H
 #define BUILDING_H
 
-class building
+#include "tile.h"
+
+class building : tile
 {
 	private:
 		// Icon market_icon;
