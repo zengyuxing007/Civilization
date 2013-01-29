@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "civilization.h"
+#include "game_board.h"
 #include "tech_card.h"
 #include "attribute.h"
 #include "resource.h"
@@ -16,8 +17,5 @@ int main()
 {
 	tech_tree::init();
 	civilization c;
-	building b;
-	tile t;
-	city fonthill;
-	cout << "Trade: " << fonthill.trade.get() << endl << "Culture: " << fonthill.culture.get() << endl << "Gold: " << fonthill.gold.get() << endl << "Production: " << fonthill.production.get() << endl;
+	game_board board(2);
 }

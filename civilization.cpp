@@ -3,7 +3,7 @@
 #include "resource_bank.h"
 #include "attributes.h"
 
-using namespace std;
+using namespace std;	
 
 //Constructor
 civilization::civilization()
