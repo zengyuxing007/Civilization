@@ -10,6 +10,8 @@
 #include "unit.h"
 #include "army.h"
 #include "city.h"
+#include "culture_card.h"
+#include "culture_hand.h"
 
 using namespace std;
 

@@ -13,6 +13,7 @@ class tile
 		resource production;
 		resource culture;
 		resource farm;
+		bool discovered;
 
 	public:
 		tile();

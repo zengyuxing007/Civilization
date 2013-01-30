@@ -8,12 +8,16 @@
 #include "attributes.h"
 #include "tech_tree.h"
 #include "city.h"
+#include "culture_hand.h"
 
 class civilization
 {
 	public:
 		// Contains the buildings unlocked by the player
 		std::vector<building> buildings;
+
+		// Contains the culture cards owned by the player
+		culture_hand culture_cards;
 
 		// Contains the cities built by the player
 		std::vector<city> cities;

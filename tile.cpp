@@ -4,7 +4,9 @@
 #include "resource.h"
 
 tile::tile()
-{}
+{
+	discovered = false;
+}
 
 tile::~tile()
 {}
