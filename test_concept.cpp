@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
-#include "Player.h"
+
 using namespace std;
 
 
@@ -27,8 +27,15 @@ class innertest
 	}
 } ;
 
+void cough(int& s)
+{
+	int* r = &s;
+	cout << *r;
+}
+
 int main()
 {
-	Player testPlayer;
+	int s = 1;
+	cough (s);
 	system("PAUSE");
 }
