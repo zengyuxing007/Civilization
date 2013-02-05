@@ -1,15 +1,16 @@
-// An army is the container for a players units
-#ifndef ARMY_H
-#define ARMY_H
+// An military is the container for a players units
+#ifndef MILITARY_H
+#define MILITARY_H
 
 class civilization;
 
 #include "unit.h"
 #include <vector>
 #include <map>
+#include <string>
 #include "figure.h"
 
-class army
+class military
 {
 	private:
 		// Array of players units (planes, infantry ect.)
@@ -19,7 +20,7 @@ class army
 		std::vector<figure> figures;
 
 		// Player who owns the miltary
-		civilization * owner;
+		civilization* owner;
 
 		// The number of figures a player has left
 		int army_reserve, scout_reserve;
@@ -27,13 +28,14 @@ class army
 		int move_speed;
 
 		// The default number of figures a player gets at the start of a game
-		static int BASE_ARMY = 6, BASE_SCOUT = 2;
+		static const int BASE_ARMY = 6, BASE_SCOUTS = 2;
 
 	public:
-		army();
-		army(civilization * owner);
+		military();
+		military(civilization * owner);
 		void addUnit(unit);
-		bool addFigure(int armies, int scouts, std::map<string, int> location);
-		void destroyFigure(figure& f)
+		bool addFigure(int armies, int scouts, std::map<std::string, int> location);
+		void destroyFigure(figure& f);
+		int getMoveSpeed();
 };
 #endif

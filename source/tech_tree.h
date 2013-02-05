@@ -4,7 +4,7 @@
 class civilization;
 
 #include <vector>
-#include "tech_card.h"
+#include ".\techcards\tech_card.h"
 
 // Every civilization has a tech tree associated with them
 class tech_tree
@@ -25,6 +25,6 @@ class tech_tree
 		static void init();
 
 		// Adds a tech card to the tree
-		bool add(tech_card tech);
+		bool add(tech_card* tech);
 };
 #endif

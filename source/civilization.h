@@ -9,6 +9,7 @@
 #include "tech_tree.h"
 #include "city.h"
 #include "culture_hand.h"
+#include "abilities.h"
 
 class civilization
 {
@@ -30,6 +31,10 @@ class civilization
 
 		// A players tech trees
 		tech_tree techs;
+
+		// A players resource abilities
+		abilities resource_abilities;
+
 		//Default constructor.
 		civilization();
 };

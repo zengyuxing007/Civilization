@@ -3,6 +3,7 @@
 #ifndef TILE_H
 #define TILE_H
 
+class figure;
 #include "resource.h"
 
 class tile
@@ -13,8 +14,13 @@ class tile
 		resource production;
 		resource culture;
 		resource farm;
+
+		// Has this tile been discovered
 		bool discovered;
 
+		// Points to any figure that is on the tile else null
+		figure* army;
+		
 	public:
 		tile();
 		~tile();

@@ -1,10 +1,12 @@
 //Military source file
 
+#include "civilization.h"
 #include "figure.h"
 #include "military.h"
 #include "unit.h"
 #include <vector>
 #include <map>
+#include <string> 
 
 military::military()
 {
@@ -24,7 +26,7 @@ void military::addUnit(unit u)
 	units.push_back(u);
 } 
 
-bool military::addFigure(int armies, int scouts, std::map<string, int> location)
+bool military::addFigure(int armies, int scouts, std::map<std::string, int> location)
 {
 	// Checks to make sure we have enough units in reserve
 	if (army_reserve > armies && scout_reserve > scouts)
@@ -45,9 +47,18 @@ bool military::addFigure(int armies, int scouts, std::map<string, int> location)
 void military::destroyFigure(figure& f)
 {
 	figure* dead_figure = &f;
-	for(std::vector<figure>::size_type i = 0; i != figures.size(); i++)
+	for(int i = 0; i < figures.size(); i++)
 	{
-		if (dead_figure = *figures[i])
-    		figures.erase(i);
+		if (dead_figure = &figures[i])
+		{
+    		figures.erase(figures.begin()+i);
+    		i--;
+    	}
+
 	}
+}
+
+int military::getMoveSpeed()
+{
+	return owner->stats.move_speed.get();
 }

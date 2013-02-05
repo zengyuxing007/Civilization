@@ -9,8 +9,13 @@ class civilization;
 class tech_card
 {
 	protected:
-		int level;
-		civilization * owner;
+		civilization* owner;
+
+		static std::string name;
+
+		// Description of what the skill does.
+		static std::string description;
+
 		// Background background(); //Background image. Same for all techs
 		// Icon icon(); //Icon that appears in the top corner
 
@@ -22,9 +27,17 @@ class tech_card
 		tech_card(civilization * owner);
 
 		// Returns the level of the tech
-		int getLevel();
+		virtual int getLevel();
 
 		// Runs when the tech is added to the tree
-		void onLearn();
+		virtual void onLearn();
+
+		// Returns the cards name
+		virtual std::string getName();
+
+		// Returns the cards description
+		virtual std::string getDescription();
+
+		void setOwner(civilization* owner);
 };
 #endif

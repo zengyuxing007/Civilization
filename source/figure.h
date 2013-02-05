@@ -6,12 +6,15 @@ class military;
 
 #include "game_board.h"
 #include <map>
+#include <string>
+
+typedef std::map<std::string, int> coor;
 
 class figure
 {
-	private:
+	protected:
 		// Location on the game board
-		std::map<string, int> location;
+		coor location;
 
 		// Reference to the military's stacking limit
 		military* commander;
@@ -24,8 +27,10 @@ class figure
 
 	public:
 		figure();
-		figure(military* commander, int armies, int scouts, std::map<string, int> location);
+		figure(military* commander, int armies, int scouts, coor location);
 		void move();
-		void stack(figure target);
+		bool stack(figure& target);
 		void split();
+		bool check();
 };
+#endif
