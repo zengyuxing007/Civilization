@@ -11,6 +11,7 @@ class resource_ability
 	protected:
 		civilization* owner;
 		static std::string name;
+		static std::string phase;
 
 	public:
 		resource_ability();
@@ -19,7 +20,11 @@ class resource_ability
 		// Checks if the owner has the resources to use the ability
 		virtual bool checkRequirements();
 
+		// Returns the name of the ability
 		virtual std::string getName();
+
+		// Returns the phase the ability is allowed in
+		virtual std::string getPhase();
 
 		// Carries out the ability
 		virtual void use();

@@ -1,24 +1,24 @@
-#ifndef HORSEBACK_RIDING_H
-#define HORSEBACK_RIDING_H
+#ifndef CURRENCY_H
+#define CURRENCY_H
 
 #include <string>
 #include "tech_card.h"
-#include "silk_for_trade.h"
+#include "incense_for_culture.h"
 
-class horseback_riding : public tech_card
+class currency : public tech_card
 {	
 	private:
 		static std::string name;
 		static std::string description;
 		
-		silk_for_trade ability;
+		incense_for_culture ability;
 
 	public:
 		// Default constructor. Sets the level and any ability phases
-		horseback_riding();
+		currency();
 
 		// Constructor associates a civilization and sets the level
-		horseback_riding(civilization * owner);
+		currency(civilization * owner);
 
 		// Returns the level of the tech
 		virtual int getLevel();

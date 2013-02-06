@@ -38,6 +38,7 @@ class tech_card
 		// Returns the cards description
 		virtual std::string getDescription();
 
+		// Sets the owner of the tech
 		void setOwner(civilization* owner);
 };
 #endif

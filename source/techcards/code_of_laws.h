@@ -1,24 +1,24 @@
-#ifndef HORSEBACK_RIDING_H
-#define HORSEBACK_RIDING_H
+#ifndef CODE_OF_LAWS_H
+#define CODE_OF_LAWS_H
 
 #include <string>
 #include "tech_card.h"
-#include "silk_for_trade.h"
+#include "victory_for_gold.h"
 
-class horseback_riding : public tech_card
+class code_of_laws : public tech_card
 {	
 	private:
 		static std::string name;
 		static std::string description;
 		
-		silk_for_trade ability;
+		victory_for_gold ability;
 
 	public:
 		// Default constructor. Sets the level and any ability phases
-		horseback_riding();
+		code_of_laws();
 
 		// Constructor associates a civilization and sets the level
-		horseback_riding(civilization * owner);
+		code_of_laws(civilization* owner);
 
 		// Returns the level of the tech
 		virtual int getLevel();

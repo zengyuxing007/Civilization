@@ -2,7 +2,7 @@ CXX = g++
 FILES = main.cpp civilization.cpp tech_card.cpp tech_tree.cpp \
 		attribute.cpp resource.cpp 
 
-TEST := test.cpp $(wildcard source/*.cpp) $(wildcard source/techcards/*.cpp) 
+TEST := test.cpp $(wildcard source/*.cpp) $(wildcard source/techcards/*.cpp) $(wildcard source/buildings/*.cpp) 
 
 OUT_EXE = civilization.exe
 

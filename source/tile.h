@@ -5,10 +5,13 @@
 
 class figure;
 #include "resource.h"
+#include <string>
 
 class tile
 {
-	private:
+	protected:
+		static std::string type;
+
 		resource trade;
 		resource gold;
 		resource production;
@@ -23,6 +26,6 @@ class tile
 		
 	public:
 		tile();
-		~tile();
+		virtual std::string getType();
 };
 #endif

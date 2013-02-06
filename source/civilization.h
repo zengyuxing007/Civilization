@@ -3,7 +3,7 @@
 #define CIVILIZATION_H_
 
 #include <vector>
-#include "building.h"
+#include ".\buildings\building.h"
 #include "resource_bank.h"
 #include "attributes.h"
 #include "tech_tree.h"

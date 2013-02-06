@@ -1,0 +1,16 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1466" measuredH="720" mockupW="1080" mockupH="720">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::ModalScreen" x="386" y="0" w="1080" h="720" measuredW="320" measuredH="240" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TabBar" x="388" y="578" w="1078" h="142" measuredW="301" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <borderStyle>square</borderStyle>
+        <color>13576743</color>
+        <selectedIndex>0</selectedIndex>
+        <tabHPosition>left</tabHPosition>
+        <tabVPosition>top</tabVPosition>
+        <text>Stats%2C%20Culture%2C%20Techs%2C%20Buildings%2C%20Military</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

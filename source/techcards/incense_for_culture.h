@@ -6,7 +6,7 @@
 #include "resource_ability.h"
 #include <string> 
 
-class silk_for_trade : public resource_ability
+class incense_for_culture : public resource_ability
 {	
 	private:
 		static std::string name;
@@ -14,9 +14,9 @@ class silk_for_trade : public resource_ability
 		int amount;
 
 	public:
-		silk_for_trade();
-		silk_for_trade(civilization* owner);
-		silk_for_trade(civilization* owner, int amount);
+		incense_for_culture();
+		incense_for_culture(civilization* owner);
+		incense_for_culture(civilization* owner, int amount);
 		virtual bool checkRequirements();
 		virtual void use();
 		virtual std::string getName();

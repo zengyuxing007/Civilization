@@ -5,6 +5,7 @@
 #include "resource_ability.h"
 
 std::string resource_ability::name = "Resource Ability";
+std::string resource_ability::phase = "Any";
 
 resource_ability::resource_ability()
 {
@@ -29,4 +30,9 @@ void resource_ability::use()
 std::string resource_ability::getName()
 {
 	return name;
+}
+
+std::string resource_ability::getPhase()
+{
+	return phase;
 }

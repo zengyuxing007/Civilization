@@ -3,6 +3,9 @@
 #include "figure.h"
 #include "tile.h"
 #include "resource.h"
+#include <string>
+
+std::string tile::type = "tile";
 
 tile::tile()
 {
@@ -10,5 +13,7 @@ tile::tile()
 	army = NULL;
 }
 
-tile::~tile()
-{}
+std::string tile::getType()
+{
+	return type;
+}
