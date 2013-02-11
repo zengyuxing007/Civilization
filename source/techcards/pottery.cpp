@@ -28,6 +28,9 @@ void pottery::onLearn()
 	// Adds the trading post to a players list of available buildings
 	owner->buildings.push_back(granary());
 
+	// Increases culture hand size
+	owner->stats.culture_hand.add(1);
+
 	// Set ability
 	ability = resource_for_gold(owner);
 

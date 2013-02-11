@@ -7,6 +7,7 @@
 struct attributes
 {
 	attribute move_speed;
+	attribute stacking_limit;
 	attribute city_limit;
 	attribute battle_bonus;
 	attribute culture_hand;
