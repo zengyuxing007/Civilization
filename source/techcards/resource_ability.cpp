@@ -9,12 +9,13 @@ std::string resource_ability::phase = "Any";
 
 resource_ability::resource_ability()
 {
-
+	setDescription();
 }
 
 resource_ability::resource_ability(civilization* o)
 {
 	owner = o;
+	setDescription();
 }
 
 bool resource_ability::checkRequirements()
@@ -35,4 +36,14 @@ std::string resource_ability::getName()
 std::string resource_ability::getPhase()
 {
 	return phase;
+}
+
+void resource_ability::setDescription()
+{
+	description = "No Ability";
+}
+
+std::string resource_ability::getDescription()
+{
+	return description;
 }

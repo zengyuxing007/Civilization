@@ -11,6 +11,9 @@ class building : public tile
 	protected:
 		static std::string type;
 
+		// Cost it to build the building
+		int cost;
+
 		// Determines whether the building can be built more than once per city
 		static bool limited;
 		
@@ -20,7 +23,14 @@ class building : public tile
 
 	public:
 		building();
+
+		// Returns the type of building
 		virtual std::string getType(); 
+
+		// Returns whether or not the building is a star building
 		virtual bool getLimited();
+
+		// Returns the cost
+		int getCost();
 };
 #endif

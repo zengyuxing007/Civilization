@@ -22,3 +22,8 @@ void attribute::set(int a)
 	if (amount < a)
 		amount = a;
 }
+
+void attribute::add(int a)
+{
+	amount += a;
+}

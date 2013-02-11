@@ -26,6 +26,14 @@ void resource::add(int a)
 	 amount += a;
 }
 
+void resource::set(int a)
+{
+	if (a >= 0)
+		amount = a;
+	else
+		amount = 0;
+}
+
 void resource::spend(int a)
 {
 	amount -= a;

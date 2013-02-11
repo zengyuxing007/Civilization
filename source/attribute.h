@@ -19,6 +19,7 @@ class attribute
 		//set function will likely vary a lot in child classes
 		void set(int amount);
 
-		//Some children classes will have add() and lose() functions
+		void add(int amount);
+		//Some children classes will have lose() functions
 };
 #endif

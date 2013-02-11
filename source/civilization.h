@@ -4,6 +4,7 @@
 
 #include <vector>
 #include ".\buildings\building.h"
+#include "great_person.h"
 #include "resource_bank.h"
 #include "attributes.h"
 #include "tech_tree.h"
@@ -16,6 +17,9 @@ class civilization
 	public:
 		// Contains the buildings unlocked by the player
 		std::vector<building> buildings;
+
+		// Contains the great people the player hasn't put down yet
+		std::vector<great_person> great_people;
 
 		// Contains the culture cards owned by the player
 		culture_hand culture_cards;
@@ -37,5 +41,8 @@ class civilization
 
 		//Default constructor.
 		civilization();
+
+		// Adds a great person to your array.
+		void addGreatPerson();
 };
 #endif

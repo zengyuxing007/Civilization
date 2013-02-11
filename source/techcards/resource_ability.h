@@ -5,6 +5,7 @@
 class civilization;
 
 #include <string>
+#include "..\resource.h"
 
 class resource_ability
 {
@@ -12,6 +13,8 @@ class resource_ability
 		civilization* owner;
 		static std::string name;
 		static std::string phase;
+		static const int max_gold = 4;
+		std::string description;
 
 	public:
 		resource_ability();
@@ -28,5 +31,14 @@ class resource_ability
 
 		// Carries out the ability
 		virtual void use();
+
+		// Sets the description of the ability
+		virtual void setDescription();
+
+		// returns the description
+		std::string getDescription();
+
+		// Gold counter for coins on the card
+		resource gold;
 };
 #endif

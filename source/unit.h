@@ -5,6 +5,9 @@
 class unit
 {
 	private:
+		// A temporary strength increase
+		int temp_strength;
+
 		// The upgrade level of the unit
 		int rank;
 
@@ -22,6 +25,8 @@ class unit
 		unit(int base_strength, int rank);
 
 		void upgrade(int rank);
+
+		void addTemp(int amount);
 
 		int getStrength();
 };

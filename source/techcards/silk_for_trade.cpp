@@ -8,21 +8,16 @@ std::string silk_for_trade::phase = "Trade";
 
 silk_for_trade::silk_for_trade()
 {
-	amount = 0;
+	setDescription();
 	owner = NULL;
 }
 
 silk_for_trade::silk_for_trade(civilization* o)
 {
-	amount = 3;
+	setDescription();
 	owner = o;
 }
 
-silk_for_trade::silk_for_trade(civilization* o, int a)
-{
-	amount = a;
-	owner = o;
-}
 
 bool silk_for_trade::checkRequirements()
 {
@@ -34,12 +29,19 @@ bool silk_for_trade::checkRequirements()
 void silk_for_trade::use()
 {
 	if (checkRequirements())
-		owner->bank.trade.add(amount);
+		owner->bank.trade.add(9);
+	civilization p;
+	p.bank.trade.add(6);
 }
 
 std::string silk_for_trade::getName()
 {
 	return name;
+}
+
+void silk_for_trade::setDescription()
+{
+	description = "Trade:\n Spend 1 Silk to gain 9 trade for yourself and 6 trade to donate to another player of your choice";
 }
 
 std::string silk_for_trade::getPhase()

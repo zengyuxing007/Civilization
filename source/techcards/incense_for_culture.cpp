@@ -9,18 +9,21 @@ std::string incense_for_culture::phase = "City Management";
 incense_for_culture::incense_for_culture()
 {
 	amount = 0;
+	setDescription();
 	owner = NULL;
 }
 
 incense_for_culture::incense_for_culture(civilization* o)
 {
 	amount = 3;
+	setDescription();
 	owner = o;
 }
 
 incense_for_culture::incense_for_culture(civilization* o, int a)
 {
 	amount = a;
+	setDescription();
 	owner = o;
 }
 
@@ -40,6 +43,11 @@ void incense_for_culture::use()
 std::string incense_for_culture::getName()
 {
 	return name;
+}
+
+void incense_for_culture::setDescription()
+{
+	description = "%s:\n Spend 1 Incense to gain %d Culture", phase, amount;
 }
 
 std::string incense_for_culture::getPhase()

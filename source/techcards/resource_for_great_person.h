@@ -1,20 +1,20 @@
 // associated with horseback riding
 
-#ifndef VICTORY_FOR_GOLD_H
-#define VICTORY_FOR_GOLD_H
+#ifndef RESOURCE_FOR_GREAT_PERSON
+#define RESOURCE_FOR_GREAT_PERSON
 
 #include "resource_ability.h"
 #include <string> 
 
-class victory_for_gold : public resource_ability
+class resource_for_great_person : public resource_ability
 {	
 	private:
 		static std::string name;
 		static std::string phase;
 
 	public:
-		victory_for_gold();
-		victory_for_gold(civilization* owner);
+		resource_for_great_person();
+		resource_for_great_person(civilization* owner);
 		
 		// Checks if the owner has the resources to use the ability
 		virtual bool checkRequirements();

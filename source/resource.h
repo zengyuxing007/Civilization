@@ -11,6 +11,7 @@ class resource
 		resource();
 		resource(int initial);
 		int get();
+		void set(int amount);
 		void add(int inc);
 		void spend(int dec);
 };

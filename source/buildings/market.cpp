@@ -4,12 +4,13 @@
 #include <vector>
 
 std::string market::type = "Market";
-bool market::limited = false;
+bool market::limited = true;
 
 market::market()
 {
-	culture.add(1);
-	trade.add(2);
+	cost = 7;
+	culture.set(1);
+	trade.set(2);
 	available_terrain.push_back("desert");
 }
 

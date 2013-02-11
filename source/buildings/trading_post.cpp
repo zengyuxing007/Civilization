@@ -8,8 +8,9 @@ bool trading_post::limited = false;
 
 trading_post::trading_post()
 {
-	culture.add(1);
-	trade.add(2);
+	cost = 7;
+	trade.set(2);
+	culture.set(1);
 	available_terrain.push_back("desert");
 }
 

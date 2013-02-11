@@ -7,7 +7,7 @@ bool building::limited = true;
 
 building::building()
 {
-	//constructor
+	cost = 0;
 }
 
 std::string building::getType()
@@ -18,4 +18,9 @@ std::string building::getType()
 bool building::getLimited()
 {
 	return limited;
+}
+
+int building::getCost()
+{
+	return cost;
 }

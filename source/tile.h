@@ -17,7 +17,8 @@ class tile
 		resource production;
 		resource culture;
 		resource farm;
-
+		resource battle_bonus;
+		
 		// Has this tile been discovered
 		bool discovered;
 
