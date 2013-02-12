@@ -8,7 +8,7 @@
 #include <string>
 
 std::string horseback_riding::name = "Horseback Riding";
-std::string horseback_riding::description = "Increases movement speed to 3\n\nTrade:\nSpend 1 silk to gain 9 trade and donate 6 trade to a player of your choice";
+std::string horseback_riding::description = "Increases movement speed to 3";
 
 //Default Constructor
 horseback_riding::horseback_riding()

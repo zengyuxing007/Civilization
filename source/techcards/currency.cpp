@@ -9,7 +9,7 @@
 #include <string>
 
 std::string currency::name = "Currency";
-std::string currency::description = "City Management:\nTrade an incense in return for 3 culture";
+std::string currency::description = "Gain Access to Market";
 
 //Default Constructor
 currency::currency()

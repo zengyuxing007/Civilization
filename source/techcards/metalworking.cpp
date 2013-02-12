@@ -9,7 +9,7 @@
 #include <string>
 
 std::string metalworking::name = "Metalworking";
-std::string metalworking::description = "Battle:\nSpend 1 iron and gain 3 strength on the next unit you play";
+std::string metalworking::description = "Gain access to Barracks";
 
 //Default Constructor
 metalworking::metalworking()

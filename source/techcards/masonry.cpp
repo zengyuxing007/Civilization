@@ -8,7 +8,7 @@
 #include <string>
 
 std::string masonry::name = "Masonry";
-std::string masonry::description = "City Management:\nTrade in any 2 resources for 1 Gold Coin";
+std::string masonry::description = "Increases Stacking Limit to 3\nAllows you to build walls";
 
 //Default Constructor
 masonry::masonry()

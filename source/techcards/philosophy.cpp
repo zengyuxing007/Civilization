@@ -9,7 +9,7 @@
 #include <string>
 
 std::string philosophy::name = "Philosophy";
-std::string philosophy::description = "City Management:\nTrade in any 2 resources for 1 Gold Coin";
+std::string philosophy::description = "Gain access to Temples";
 
 //Default Constructor
 philosophy::philosophy()

@@ -9,7 +9,7 @@
 #include <string>
 
 std::string code_of_laws::name = "Code of Laws";
-std::string code_of_laws::description = "Battle:\nAfter a successful battle adds a Gold Coin to this Card";
+std::string code_of_laws::description = "Learn Republic\nGain Access to Trading Post";
 
 //Default Constructor
 code_of_laws::code_of_laws()

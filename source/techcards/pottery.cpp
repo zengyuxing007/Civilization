@@ -9,7 +9,7 @@
 #include <string>
 
 std::string pottery::name = "Pottery";
-std::string pottery::description = "City Management:\nTrade in any 2 resources for 1 Gold Coin";
+std::string pottery::description = "Gain access to Granary";
 
 //Default Constructor
 pottery::pottery()
