@@ -1,21 +1,22 @@
 // associated with horseback riding
 
-#ifndef SILK_FOR_TRADE_H
-#define SILK_FOR_TRADE_H
+#ifndef SINGLE_HEAL_H
+#define SINGLE_HEAL_H
 
 #include "resource_ability.h"
 #include <string> 
 
-class silk_for_trade : public resource_ability
+class single_heal : public resource_ability
 {	
 	private:
 		static std::string name;
 		static std::string phase;
+		int amount;
 
 	public:
-		silk_for_trade();
-		silk_for_trade(civilization* owner);
-		silk_for_trade(civilization* owner, int amount);
+		single_heal();
+		single_heal(civilization* owner);
+		single_heal(civilization* owner, int amount);
 		
 		// Checks if the owner has the resources to use the ability
 		virtual bool checkRequirements();

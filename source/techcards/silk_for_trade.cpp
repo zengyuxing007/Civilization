@@ -29,9 +29,12 @@ bool silk_for_trade::checkRequirements()
 void silk_for_trade::use()
 {
 	if (checkRequirements())
+	{
+		owner->bank.silk.spend(1);
 		owner->bank.trade.add(9);
-	civilization p;
-	p.bank.trade.add(6);
+		civilization p;
+		p.bank.trade.add(6);
+	}
 }
 
 std::string silk_for_trade::getName()
@@ -41,7 +44,7 @@ std::string silk_for_trade::getName()
 
 void silk_for_trade::setDescription()
 {
-	description = "Trade:\n Spend 1 Silk to gain 9 trade for yourself and 6 trade to donate to another player of your choice";
+	description = "%s:\n Spend 1 Silk and gain 9 trade for yourself and donate 6 trade to another player", phase;
 }
 
 std::string silk_for_trade::getPhase()

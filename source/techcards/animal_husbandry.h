@@ -1,21 +1,26 @@
-#ifndef AGRICULTURE_H
-#define AGRICULTURE_H
+#ifndef ANIMAL_HUSBANDRY_H
+#define ANIMAL_HUSBANDRY_H
 
 #include <string>
 #include "tech_card.h"
+#include "wheat_for_production.h"
+#include "single_heal.h"
 
-class agriculture : public tech_card
+class animal_husbandry : public tech_card
 {	
 	private:
 		static std::string name;
 		static std::string description;
+		
+		wheat_for_production ability;
+		single_heal.h heal_ability;
 
 	public:
 		// Default constructor. Sets the level and any ability phases
-		agriculture();
+		animal_husbandry();
 
 		// Constructor associates a civilization and sets the level
-		agriculture(civilization * owner);
+		animal_husbandry(civilization * owner);
 
 		// Returns the level of the tech
 		virtual int getLevel();

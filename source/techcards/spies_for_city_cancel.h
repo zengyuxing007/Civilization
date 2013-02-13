@@ -1,21 +1,20 @@
 // associated with horseback riding
 
-#ifndef SILK_FOR_TRADE_H
-#define SILK_FOR_TRADE_H
+#ifndef SPIES_FOR_CITY_CANCEL
+#define SPIES_FOR_CITY_CANCEL
 
 #include "resource_ability.h"
 #include <string> 
 
-class silk_for_trade : public resource_ability
+class spies_for_city_cancel : public resource_ability
 {	
 	private:
 		static std::string name;
 		static std::string phase;
 
 	public:
-		silk_for_trade();
-		silk_for_trade(civilization* owner);
-		silk_for_trade(civilization* owner, int amount);
+		spies_for_city_cancel();
+		spies_for_city_cancel(civilization* owner);
 		
 		// Checks if the owner has the resources to use the ability
 		virtual bool checkRequirements();

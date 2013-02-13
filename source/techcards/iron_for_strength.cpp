@@ -39,7 +39,10 @@ void iron_for_strength::use()
 {
 	unit u;
 	if (checkRequirements())
+	{
+		owner->bank.iron.spend(1);
 		u.addTemp(3);
+	}
 }
 
 std::string iron_for_strength::getName()

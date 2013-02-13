@@ -1,21 +1,24 @@
-#ifndef AGRICULTURE_H
-#define AGRICULTURE_H
+#ifndef WRITING_H
+#define WRITING_H
 
 #include <string>
 #include "tech_card.h"
+#include "spies_for_city_cancel.h"
 
-class agriculture : public tech_card
+class writing : public tech_card
 {	
 	private:
 		static std::string name;
 		static std::string description;
+		
+		spies_for_city_cancel ability;
 
 	public:
 		// Default constructor. Sets the level and any ability phases
-		agriculture();
+		writing();
 
 		// Constructor associates a civilization and sets the level
-		agriculture(civilization * owner);
+		writing(civilization * owner);
 
 		// Returns the level of the tech
 		virtual int getLevel();

@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include ".\source\techcards\masonry.h"
+#include ".\source\techcards\writing.h"
 #include ".\source\civilization.h"
 #include ".\source\tech_tree.h"
 #include ".\source\techcards\tech_card.h"
@@ -14,12 +14,12 @@ int main()
 	tech_tree::init();
 	
 	civilization c;
-	masonry h;
+	writing h;
 	c.bank.trade.add(6);
 	tech_card* t = &h;
 	c.techs.add(t);
 	c.bank.spies.add(1);
 	c.bank.iron.add(2);
 	// c.resource_abilities.activate(0);
-	cout << c.stats.stacking_limit.get();
+	// cout << c.stats.stacking_limit.get();
 }

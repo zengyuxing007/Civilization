@@ -37,7 +37,10 @@ bool incense_for_culture::checkRequirements()
 void incense_for_culture::use()
 {
 	if (checkRequirements())
+	{
+		owner->bank.incense.spend(1);
 		owner->bank.culture.add(amount);
+	}
 }
 
 std::string incense_for_culture::getName()

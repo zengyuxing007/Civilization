@@ -1,21 +1,22 @@
 // associated with horseback riding
 
-#ifndef SILK_FOR_TRADE_H
-#define SILK_FOR_TRADE_H
+#ifndef WHEAT_FOR_CULTURE_H
+#define WHEAT_FOR_CULTURE_H
 
 #include "resource_ability.h"
 #include <string> 
 
-class silk_for_trade : public resource_ability
+class wheat_for_culture : public resource_ability
 {	
 	private:
 		static std::string name;
 		static std::string phase;
+		int amount;
 
 	public:
-		silk_for_trade();
-		silk_for_trade(civilization* owner);
-		silk_for_trade(civilization* owner, int amount);
+		wheat_for_culture();
+		wheat_for_culture(civilization* owner);
+		wheat_for_culture(civilization* owner, int amount);
 		
 		// Checks if the owner has the resources to use the ability
 		virtual bool checkRequirements();

@@ -4,7 +4,6 @@
 #include "..\civilization.h"
 #include "..\buildings\building.h"
 #include "tech_card.h"
-#include "resource_ability.h"
 #include <string>
 
 std::string agriculture::name = "Agriculture";
