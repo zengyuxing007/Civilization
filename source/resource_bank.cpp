@@ -15,7 +15,7 @@ resource_bank::resource_bank()
 int resource_bank::getTotalResources()
 {
 	int t = 0;
-	for (int i = 0; i < bank.size(); i++)
+	for (unsigned int i = 0; i < bank.size(); i++)
 		t += bank[i]->get();
 	return t;
 }

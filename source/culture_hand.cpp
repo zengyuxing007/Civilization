@@ -18,10 +18,13 @@ culture_hand::culture_hand(civilization* o)
 
 bool culture_hand::add(culture_card c)
 {
-	if (hand.size() <= hand_size - 1)
+	if (hand_size > 0)
 	{
-		hand.push_back(c);
-		return true;
+		if (hand.size() < (unsigned)hand_size)
+		{
+			hand.push_back(c);
+			return true;
+		}
 	}
 	return false;
 }

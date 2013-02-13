@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "resource_for_great_person.h"
+#include "..\abilities\resource_for_great_person.h"
 
 class philosophy : public tech_card
 {	

@@ -3,8 +3,8 @@
 #include "horseback_riding.h"
 #include "..\civilization.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "silk_for_trade.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\silk_for_trade.h"
 #include <string>
 
 std::string horseback_riding::name = "Horseback Riding";

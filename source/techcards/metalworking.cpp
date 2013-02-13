@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\barracks.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "iron_for_strength.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\iron_for_strength.h"
 #include <string>
 
 std::string metalworking::name = "Metalworking";

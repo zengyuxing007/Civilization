@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\trading_post.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "victory_for_gold.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\victory_for_gold.h"
 #include <string>
 
 std::string code_of_laws::name = "Code of Laws";

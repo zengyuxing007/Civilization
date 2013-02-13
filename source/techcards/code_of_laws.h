@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "victory_for_gold.h"
+#include "..\abilities\victory_for_gold.h"
 
 class code_of_laws : public tech_card
 {	

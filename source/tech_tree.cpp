@@ -23,7 +23,7 @@ tech_tree::tech_tree(civilization * o)
 
 void tech_tree::init()
 {
-	for (int i = 0; i < trade_requirements.size(); i++)
+	for (unsigned int i = 0; i < trade_requirements.size(); i++)
 		trade_requirements[i] += i * 5;
 }
 

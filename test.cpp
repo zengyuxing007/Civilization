@@ -5,8 +5,8 @@
 #include ".\source\civilization.h"
 #include ".\source\tech_tree.h"
 #include ".\source\techcards\tech_card.h"
-#include ".\source\techcards\silk_for_trade.h"
-#include ".\source\techcards\resource_ability.h"
+#include ".\source\abilities\silk_for_trade.h"
+#include ".\source\abilities\resource_ability.h"
 using namespace std;
 
 int main()

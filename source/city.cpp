@@ -17,7 +17,7 @@ void city::collect()
 	production = 0;
 	farms = std::vector<resource>();
 
-	for (int i = 0; i < outskirts.size(); i++)
+	for (unsigned int i = 0; i < outskirts.size(); i++)
 	{
 
 	}

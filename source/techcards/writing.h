@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "spies_for_city_cancel.h"
+#include "..\abilities\spies_for_city_cancel.h"
 
 class writing : public tech_card
 {	

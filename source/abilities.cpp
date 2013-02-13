@@ -1,7 +1,7 @@
 // A bank for storing a players resources
 
 #include "abilities.h"
-#include ".\techcards\resource_ability.h"
+#include ".\abilities\resource_ability.h"
 #include <vector>
 #include "civilization.h"
 
@@ -22,6 +22,7 @@ void abilities::add(resource_ability* r)
 
 void abilities::activate(int index)
 {
-	if (index < resource_abilities.size()){}
-		resource_abilities[index]->use();
+	if (index > 0)
+		if ((unsigned)index < resource_abilities.size())
+			resource_abilities[index]->use();
 }

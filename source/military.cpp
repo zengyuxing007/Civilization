@@ -47,9 +47,9 @@ bool military::addFigure(int armies, int scouts, std::map<std::string, int> loca
 void military::destroyFigure(figure& f)
 {
 	figure* dead_figure = &f;
-	for(int i = 0; i < figures.size(); i++)
+	for(unsigned int i = 0; i < figures.size(); i++)
 	{
-		if (dead_figure = &figures[i])
+		if (dead_figure == &figures[i])
 		{
     		figures.erase(figures.begin()+i);
     		i--;

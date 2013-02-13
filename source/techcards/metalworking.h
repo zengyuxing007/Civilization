@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "iron_for_strength.h"
+#include "..\abilities\iron_for_strength.h"
 
 class metalworking : public tech_card
 {	

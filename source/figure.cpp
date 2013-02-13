@@ -56,7 +56,9 @@ bool figure::stack(figure& f)
 		armies += f.armies;
 		scouts += f.scouts;
 		commander->destroyFigure(f);
+		return true;
 	}
+	return false;
 }
 
 // Splites up the figure group into smaller groups

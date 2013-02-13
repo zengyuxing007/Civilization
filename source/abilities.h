@@ -4,7 +4,7 @@
 
 class civilization;
 
-#include ".\techcards\resource_ability.h"
+#include ".\abilities\resource_ability.h"
 #include <vector>
 
 class abilities

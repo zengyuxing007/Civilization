@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\library.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "spies_for_city_cancel.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\spies_for_city_cancel.h"
 #include <string>
 
 std::string writing::name = "Writing";

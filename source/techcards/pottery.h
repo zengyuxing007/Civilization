@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "resource_for_gold.h"
+#include "..\abilities\resource_for_gold.h"
 
 class pottery : public tech_card
 {	

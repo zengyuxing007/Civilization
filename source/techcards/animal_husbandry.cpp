@@ -4,9 +4,9 @@
 #include "..\civilization.h"
 #include "..\buildings\barracks.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "wheat_for_production.h"
-#include "single_heal.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\wheat_for_production.h"
+#include "..\abilities\single_heal.h"
 #include <string>
 
 std::string animal_husbandry::name = "Animal Husbandry";
@@ -38,7 +38,7 @@ void animal_husbandry::onLearn()
 	owner->resource_abilities.add(general);
 
 	// Give that ability to the owner
-	resource_ability* general = &single_heal;
+	general = &heal_ability;
 	owner->resource_abilities.add(general);
 }
 

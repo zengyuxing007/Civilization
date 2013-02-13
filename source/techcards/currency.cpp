@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\market.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "incense_for_culture.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\incense_for_culture.h"
 #include <string>
 
 std::string currency::name = "Currency";

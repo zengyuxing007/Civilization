@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "silk_for_trade.h"
+#include "..\abilities\silk_for_trade.h"
 
 class horseback_riding : public tech_card
 {	

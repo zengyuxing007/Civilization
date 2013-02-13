@@ -3,7 +3,7 @@
 
 #include <string>
 #include "tech_card.h"
-#include "incense_for_culture.h"
+#include "..\abilities\incense_for_culture.h"
 
 class currency : public tech_card
 {	

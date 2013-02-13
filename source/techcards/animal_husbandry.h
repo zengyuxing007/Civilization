@@ -3,8 +3,8 @@
 
 #include <string>
 #include "tech_card.h"
-#include "wheat_for_production.h"
-#include "single_heal.h"
+#include "..\abilities\wheat_for_production.h"
+#include "..\abilities\single_heal.h"
 
 class animal_husbandry : public tech_card
 {	
@@ -13,7 +13,7 @@ class animal_husbandry : public tech_card
 		static std::string description;
 		
 		wheat_for_production ability;
-		single_heal.h heal_ability;
+		single_heal heal_ability;
 
 	public:
 		// Default constructor. Sets the level and any ability phases

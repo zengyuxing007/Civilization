@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\granary.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "resource_for_gold.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\resource_for_gold.h"
 #include <string>
 
 std::string pottery::name = "Pottery";

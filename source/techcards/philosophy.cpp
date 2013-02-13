@@ -4,8 +4,8 @@
 #include "..\civilization.h"
 #include "..\buildings\temple.h"
 #include "tech_card.h"
-#include "resource_ability.h"
-#include "resource_for_great_person.h"
+#include "..\abilities\resource_ability.h"
+#include "..\abilities\resource_for_great_person.h"
 #include <string>
 
 std::string philosophy::name = "Philosophy";
