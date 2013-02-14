@@ -1,7 +1,4 @@
 //Attributes is a struct containing all of a civilizations stats and limits
-#ifndef ATTRIBUTES_H
-#define ATTRIBUTES_H
-
 #include "attribute.h"
 
 struct attributes
@@ -11,5 +8,7 @@ struct attributes
 	attribute city_limit;
 	attribute battle_bonus;
 	attribute culture_hand;
+	skill swimming;
+	skill flight;
+	skill sailing;
 };
-#endif
